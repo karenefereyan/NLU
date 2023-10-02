@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header-logo,
+.footer-logo {
+  width: 150px;
+}
+
+nav {
+  background-color: #bbb;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+ul.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul.navbar li {
+  margin: 0 20px;
+  position: relative;
+  list-style: none;
+}
+
+ul.navbar li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Initial submenus are hidden. Display with javascript */
+ul.navbar li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #c9c9c9;
+}
+
+ul.navbar li ul.submenu li {
+  margin: 10px;
+}
+
+ul.navbar li ul.submenu li a {
+  text-align: center;
+}
+
+ul.navbar li:hover ul.submenu {
+  display: block;
+  z-index: 1000;
+}
+
+/* SLIDER STYLES */
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+}
+
+.slider .slides img {
+  width: 100%;
+  display: none;
+  /*Initially, no images should be displayed. Adjust that with JS */
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.prev,
+.next {
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+
+.prev {
+  margin-left: 10px;
+}
+
+.next {
+  margin-right: 10px;
+}
+
+/* HERO HOMEPAGE STYLES */
+.homepage {
+  padding: 20px 10px;
+}
+
+#flavor-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#flavor-list div {
+  margin-left: 20px;
+}
+
+#flavor-list p {
+  color: #c9c9c9;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-section {
+  border: 1px solid #000;
+  padding: 20px 10px;
+}
+.form-section form {
+  margin-right: 15px;
+}
+
+.form-section h1 {
+  text-align: center;
+}
+
+.form-section form input,
+.form-section form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px 3px;
+}
+
+.newsletter-section {
+  display: inline;
+  margin-bottom: 20px;
+}
+
+.newsletter-section input[type="checkbox"] {
+  display: inline;
+  margin-right: 10px;
+}
+
+.form-section form button {
+  margin: 0 auto;
+  display: block;
+  background-color: blue;
+  outline: none;
+  border: 1px solid #000;
+  padding: 15px;
+  color: #fff;
+}
+
+/* FOOTER STYLES */
+footer {
+  background-color: #bbb;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+footer img {
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+
+  .text-section {
+    flex: 1;
+  }
+
+  .form-section {
+    flex: 1;
+  }
+
+  .form-section form button {
+    margin-top: 20px;
+  }
+
+  ul.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  nav {
+    padding: 30px 100px;
+  }
+
+  .text-section {
+    margin-right: 30px;
+  }
+
+  .form-section {
+    padding: 10px;
+  }
+
+  .form-section form {
+    margin-right: 10px;
+  }
+
+  .footer-logo,
+  .logo img {
+    width: 150px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}

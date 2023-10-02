@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>NLU - Categories List</title>
+  </head>
+
+  <body>
+    <!--HEADER-->
+    <header>
+      <!--LOGO-->
+      <div class="logo">
+        <img
+          class="header-logo"
+          src="/logo.png"
+          alt="National Louis University"
+        />
+      </div>
+
+      <!-- NAVIGATION-->
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a href="#">Capabilities</a>
+            <ul class="submenu">
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Production</a></li>
+              <li><a href="#">Certification</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Flavors</a>
+            <ul class="submenu">
+              <li><a href="#">Citrus</a></li>
+              <li><a href="#">Exotics</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- SLIDER-->
+    <div class="slider">
+      <div class="slides">
+        <img src="/slider/slider_1.jpg" alt="Slide 1" />
+        <img src="/slider/slider_2.jpg" alt="Slide 2" />
+        <img src="/slider/slider_3.jpg" alt="Slide 3" />
+      </div>
+      <div class="navigation">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <!-- HOMEPAGE HERO SECTION-->
+    <section class="homepage">
+      <div class="text-section">
+        <h1>Flavour Category Name</h1>
+        <div class="flavour-types">
+          <ul id="category-list"></ul>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h1>Get a Quote</h1>
+        <form>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input
+            type="text"
+            name="capabilities"
+            placeholder="Select a capability"
+          />
+          <textarea cols="10" rows="5" placeholder="Comments"></textarea>
+          <div class="newsletter-section">
+            <input type="checkbox" id="newsletterCheckbox" />
+            <span>I'd like to receive the newsletter</span>
+          </div>
+          <button type="submit" class="form-btn">Get a Quote</button>
+        </form>
+      </div>
+    </section>
+
+    <!--FOOTER SECTION-->
+    <footer>
+      <div class="copyright">
+        Copyright &copy; <span id="year"></span>. All rights reserved.
+      </div>
+
+      <img class="footer-logo" src="/logo.png" alt="" />
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="categories.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+  </body>
+</html>
